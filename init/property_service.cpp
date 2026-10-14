@@ -875,7 +875,7 @@ static void LoadPropertiesFromSecondStageRes(std::map<std::string, std::string>*
 // on runtime.
 static void update_sys_usb_config() {
     // emulators don't have USB, they enable adb another way.
-    const char* DEBUG_PROP = "persist.sys.evox_debug_enabled";
+    const char* DEBUG_PROP = "persist.sys.mist_debug_enabled";
     std::string debug_value = GetProperty(DEBUG_PROP, "0");
     bool debug_enabled = debug_value == "1";
 
@@ -1311,7 +1311,7 @@ void LoadVbMetaOverrides() {
 }
 
 void LoadDebugProperties() {
-    const char* DEBUG_PROP = "persist.sys.evox_debug_enabled";
+    const char* DEBUG_PROP = "persist.sys.mist_debug_enabled";
     std::string error;
     uint32_t res;
 
